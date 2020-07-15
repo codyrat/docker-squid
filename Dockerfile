@@ -1,3 +1,4 @@
+
 FROM alpine
 
 LABEL maintainer="Codyrat <codyrat@users.noreply.github.com>" \
@@ -8,10 +9,6 @@ LABEL maintainer="Codyrat <codyrat@users.noreply.github.com>" \
 
 # HEALTHCHECK --interval=30m --timeout=1s \
 #   CMD squidclient -h localhost cache_object://localhost/counters || exit 1
-
-RUN echo nameserver 10.236.255.161 > /etc/resolv.conf
-RUN echo nameserver 10.236.255.162 >> /etc/resolv.conf
-
 
 # Install packages
 RUN echo "http://nl.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories && \
